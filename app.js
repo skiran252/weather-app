@@ -1,15 +1,15 @@
 const request = require("request");
 const geocode = require("./utils/geocode")
-const weatherapi = require("./utils/weatherapi")
+const forecast = require("./utils/weatherapi")
 
 
-geocode('Bengaluru',(error,data)=>{
+geocode('Hyderabad',(error,data)=>{
   if (error){
     console.log(error)
   }
   else {
   console.log(data)
-  weatherapi(data.latitude,data.longitude,(error,data)=>{
+  forecast(data.latitude,data.longitude,(error,data)=>{
     if (error){
       console.log(error)
     }
