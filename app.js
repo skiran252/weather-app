@@ -5,16 +5,15 @@ const forecast = require("./utils/weatherapi")
 
 geocode('Hyderabad',(error,data)=>{
   if (error){
-    console.log(error)
+    return console.log(error)
   }
   else {
-  console.log(data)
   forecast(data.latitude,data.longitude,(error,data)=>{
     if (error){
-      console.log(error)
+      return console.log(error)
     }
     else {
-      console.log(data.description,'. It is currently '+data.temp,'C','Todays max: '+data.maxtemp,'and Todays min: '+data.mintemp)
+      return console.log(data.description,'. It is currently '+data.temp,'C','Todays max: '+data.maxtemp,'and Todays min: '+data.mintemp)
     }
   })
   }
