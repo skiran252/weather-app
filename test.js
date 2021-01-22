@@ -1,6 +1,6 @@
 const request = require("request");
 const url = 'https://coderbyte.com/api/challenges/json/age-counting'
-var options = {
+let options = {
   url: url,
   json:true
 };
