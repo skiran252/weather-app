@@ -2,7 +2,7 @@ const request = require("request");
 const weatherapi = (latitude,longitude,callback) => {
     const API_KEY ='cb5ccd32a962f8b70c25d526ae8f1e1c'
     const url = 'https://api.openweathermap.org/data/2.5/onecall?units=metric&lat='+latitude+'&lon='+longitude+'&exclude=hourly,minutely&appid='+API_KEY
-    let options = {
+    const options = {
       url: url,
       json:true
     };
